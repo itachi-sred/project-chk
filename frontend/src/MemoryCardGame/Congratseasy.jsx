@@ -126,6 +126,9 @@ const Congteasy = () => {
     navigate("/easy");
   };
 
+  const handleClaimNFT = () => {
+    
+  }
   const handleExit = () => {
     localStorage.removeItem("gameCompleted");
     navigate("/play");
@@ -145,6 +148,7 @@ const Congteasy = () => {
       </ImageContainer>
 
       <ButtonContainer>
+      <PixelButton onClick={handleClaimNFT}>Claim NFT</PixelButton> {/* <-- New Button */}
         <PixelButton onClick={handlePlayAgain}>Yes</PixelButton>
         <PixelButton onClick={handleExit}>No</PixelButton>
       </ButtonContainer>

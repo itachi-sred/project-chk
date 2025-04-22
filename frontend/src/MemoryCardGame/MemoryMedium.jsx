@@ -42,7 +42,7 @@ const shuffleArray = (array) => {
 };
 const saveGameData = async (gameData) => {
   try {
-    const response = await axios.post("http://localhost:5000/api/memory/save", gameData, {
+    const response = await axios.post("http://localhost:5323/api/memory/save", gameData, {
       headers: { "Content-Type": "application/json" },
     });
 
@@ -439,7 +439,7 @@ const MemoryMedium = () => {
       <Box sx={{ mt: 2, textAlign: "center" }}>
      
 <PixelButton onClick={() => { handleSaveNewGame(); handleNewGame(); }} sx={{ mt: 2 }}>
-          New Game
+          New Game medium
         </PixelButton>
       </Box>
 

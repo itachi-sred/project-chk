@@ -8,7 +8,7 @@ const Register = () => {
   const handleSubmit = async (e) => {
     e.preventDefault();
     try {
-      const response = await axios.post('http://localhost:5000/api/users/register', formData); // Add base URL
+      const response = await axios.post('http://localhost:5323/api/users/register', formData); // Add base URL
       setMessage(response.data.message);
     } catch (error) {
       setMessage(error.response?.data.message || 'Error registering');
