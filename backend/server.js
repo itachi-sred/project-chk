@@ -1,7 +1,6 @@
 const express = require('express');
 const cors = require('cors');
 const dotenv = require('dotenv');
-const configs = require('fine-packages');
 const bodyParser = require('body-parser');
 const connectDB = require('./config/database');
 const userRoutes = require('./routes/userRoutes');
@@ -32,7 +31,6 @@ app.use('/api/memory', memoryRoutes);
 
 // Connect to MongoDB
 connectDB();
-configs({development: true});
 
 // Default Route
 app.get('/', (req, res) => {
